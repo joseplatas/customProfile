@@ -7,12 +7,11 @@ var app = express();
 
 //homepage
 app.get('/',function(req, res, next){
-  res.render('index', {title: 'Cool hug', condition: false});
-  // res.send("hello world");
+  res.render('index', {title: 'Homepage', condition: false});
 });
 
 //handlebars engine
-app.engine('hbs', exphbs({extname: 'hbs', defaultLayout: 'main', layoutDir: __dirname + '/views/layouts/'}));
+app.engine('hbs', exphbs({extname: 'hbs', defaultLayout: 'main', layoutDir: __dirname + '/views/layouts/', partialsDir: __dirname + '/views/partials/' }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.hbs');
 
