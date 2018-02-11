@@ -5,13 +5,13 @@ var bodyParser = require('body-parser');
 var exphbs = require('express-handlebars');
 var app = express();
 
-//homepage
-app.get('/',function(req, res, next){
-  res.render('index', {title: 'Homepage', condition: false});
-});
-
-//handlebars engine
-app.engine('hbs', exphbs({extname: 'hbs', defaultLayout: 'main', layoutDir: __dirname + '/views/layouts/', partialsDir: __dirname + '/views/partials/' }));
+//handlebars template engine
+app.engine('hbs', exphbs({
+  extname: 'hbs',
+  defaultLayout: 'main',
+  layoutDir: __dirname + '/views/layouts/',
+  partialsDir: __dirname + '/views/partials/' })
+);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.hbs');
 
@@ -22,18 +22,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // serve static files from /public
 app.use('/static',express.static(path.join(__dirname, 'public')));
 
+// routes setup
+var mainRoutes = require('./routes');
+var profileRoutes = require('./routes/profile');
+app.use('/',mainRoutes);
+app.use('/profile', profileRoutes);
+
 //404 error handler
-app.use((req, res, next) => {
+app.use(function(req, res, next) {
   const err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-app.use((err, req, res, next) => {
+app.use(function(err, req, res, next) {
   res.locals.error = err;
   res.status(err.status);
   res.render('errors/404');
 });
-
 
 //server setup
 app.listen(5000, function(){
