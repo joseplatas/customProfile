@@ -16,8 +16,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', '.hbs');
 
 // parse incoming requests
+app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 // serve static files from /public
 app.use('/static',express.static(path.join(__dirname, 'public')));
