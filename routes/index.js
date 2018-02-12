@@ -6,7 +6,7 @@ const router = express.Router();
 
 //homepage
 router.get('/',function(req, res, next){
-  res.render('index', {title: 'Homepage', condition: false});
+  res.render('index', {title: 'TeamTreehouse Profile', condition: false});
 });
 
 

@@ -1,0 +1,271 @@
+/*html defaults*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Metrophobic', Arial, serif;
+}
+html {
+    height: 100%;
+}
+body{
+  font-size: 16px;
+  color: #363636;
+}
+
+/*base styling*/
+
+.page_wrapper {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: auto;
+}
+.page_wrapper:after {
+    content: "";
+    clear: both;
+}
+/*loading view*/
+#treehouse_profile .container_wrap {
+    width: 100%;
+    height: 100%;
+    background: #5fcf80;
+    position: fixed;
+    z-index: 100;
+}
+#treehouse_profile .container_wrap .content {
+    width: 500px;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -80px;
+    margin-left: -250px;
+}
+#treehouse_profile .container_wrap .content h1 {
+    color: #5fcf80;
+    font-size: 2em;
+}
+@media (max-width:500px) {
+    #treehouse_profile .container_wrap .content {
+        width: 80%;
+        margin-top: -120px;
+        margin-left: -40%;
+    }
+}
+
+/*profile header*/
+
+#treehouse_profile h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+#treehouse_profile h1 {
+    font-size: 30px;
+}
+#treehouse_profile h2 {
+    font-size: 24px;
+}
+#treehouse_profile h3 {
+    font-size: 20px;
+}
+#treehouse_profile .title {
+    color: #637a91;
+    margin: 20px 0;
+}
+#treehouse_profile .profile_header {
+    width: 100%;
+    height: 330px;
+    background: #5fcf80;
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+}
+#treehouse_profile .profile_header img {
+    width: 100%;
+    max-width: 170px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    margin: 15px auto;
+}
+#treehouse_profile .badges {
+    width: 100%;
+    height: 575px;
+    position: relative;
+    border-bottom: 1px solid #9b9b9b;
+    overflow: hidden;
+}
+#treehouse_profile .badges .section_name {
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    background: rgba(255, 255, 255, .9);
+    color: #637a91;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -125px;
+    z-index: 20;
+}
+#treehouse_profile .badges .badges_list {
+    width: auto;
+    height: 575px;
+    padding: 10px 0;
+    background: #f1f1f1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: slide 30s linear infinite;
+}
+@keyframes slide {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-1000px, 0, 0);
+    }
+}
+#treehouse_profile .badges .badges_list img {
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/*points earned*/
+
+#treehouse_profile .points_earned {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    text-align: center;
+}
+#treehouse_profile .points_earned .total_points {
+    width: auto;
+    margin: auto;
+    color: #53BBB4;
+    font-size: 24px;
+    font-weight: normal;
+    padding-bottom: 10px;
+    display: inline-block;
+    border-bottom: 1px solid #53BBB4;
+}
+#treehouse_profile .points_earned .total_points span {
+    font-weight: bold;
+}
+#treehouse_profile .points_earned .points,
+#treehouse_profile .points_earned .points_chart {
+    width: 50%;
+    float: left;
+    height: 100%;
+}
+#treehouse_profile .points_earned .points_wrap {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+}
+#treehouse_profile .points_earned h2 {
+    color: #363636;
+    text-decoration: underline;
+}
+#treehouse_profile .points_earned .points ul {
+    width: 80%;
+    height: auto;
+    margin: 20px auto;
+    list-style-type: none;
+}
+#treehouse_profile .points_earned .points ul li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+#treehouse_profile .points_earned .points ul li span {
+    font-weight: bold;
+    padding: 0 5px;
+}
+/*chart layout*/
+#treehouse_profile .points_earned .points_chart .chart_container{
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  margin: 20px auto;
+  border-left: 10px solid #637A91;
+}
+#treehouse_profile .points_earned .points_chart  .bar{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  background: #9b9b9b;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+  text-transform: uppercase;
+}
+/*chart colors*/
+#treehouse_profile .points_earned .points_chart .bar.javascript{
+  background: #C25975;
+}
+#treehouse_profile .points_earned .points_chart .bar.css{
+  background: #3079ab;
+}
+#treehouse_profile .points_earned .points_chart .bar.html{
+  background:#39ADD1 ;
+}
+#treehouse_profile .points_earned .points_chart .bar.php{
+  background: #7D669E;
+}
+#treehouse_profile .points_earned .points_chart .bar.developmenttools{
+  background: #637A91;
+}
+#treehouse_profile .points_earned .points_chart .bar.design{
+  background: #E59A13;
+}
+#treehouse_profile .points_earned .points_chart .bar.wordpress{
+  background: #838CC7;
+}
+#treehouse_profile .points_earned .points_chart .bar.ruby{
+  background: #E15258;
+}
+#treehouse_profile .points_earned .points_chart .bar.digitalliteracy{
+  background: #C38CD4;
+}
+#treehouse_profile .points_earned .points_chart .bar.business{
+  background: #F9845B;
+}
+
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+/**/
