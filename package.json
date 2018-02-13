@@ -2,8 +2,9 @@
   "name": "treehouse-profile",
   "version": "1.0.0",
   "description": "A node.js project to analyse the process of a treehouse user using their api ",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jose Platas",
