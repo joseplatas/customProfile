@@ -1,66 +1,77 @@
 /*html defaults*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html {
-    height: 100%;
+  height: 100%;
 }
-body{
+body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: #444;
 }
-
 /*base styling*/
 
 .page_wrapper {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    margin: auto;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: auto;
 }
 .page_wrapper:after {
-    content: "";
-    clear: both;
+  content: "";
+  clear: both;
 }
-/*loading view*/
+#treehouse_profile .search_again_btn{
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 100;
+  background: #3079ab;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
 #treehouse_profile .homepage {
-    width: 100%;
-    height: 100%;
-    background: #5fcf80;
-    position: fixed;
-    z-index: 100;
+  width: 100%;
+  height: 100%;
+  background: #5fcf80;
+  position: fixed;
+  z-index: 100;
 }
 #treehouse_profile .homepage .form_wrap {
-    width: 500px;
-    height: auto;
-    text-align: center;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-top: -100px;
-    margin-left: -250px;
-    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  width: 500px;
+  height: auto;
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -250px;
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 #treehouse_profile .homepage .form_wrap h1 {
-    color: #5fcf80;
-    font-size: 2em;
+  color: #5fcf80;
+  font-size: 2em;
 }
-#treehouse_profile .homepage .form_wrap p{
+#treehouse_profile .homepage .form_wrap p {
   font-size: 1em;
   line-height: 1.2em;
   color: #444;
   margin-bottom: 10px;
 }
-#treehouse_profile .homepage .form_wrap input{
+#treehouse_profile .homepage .form_wrap input {
   width: 80%;
   height: 50px;
   padding: 0 10px;
@@ -80,12 +91,11 @@ body{
   margin: auto;
   margin-bottom: 10px;
 }
-#treehouse_profile .homepage .form_wrap input:focus,
-#treehouse_profile .homepage .form_wrap input:active{
+#treehouse_profile .homepage .form_wrap input:focus, #treehouse_profile .homepage .form_wrap input:active {
   background-color: #fff;
   border-color: #8c9aa6;
 }
-#treehouse_profile .homepage .form_wrap button{
+#treehouse_profile .homepage .form_wrap button {
   width: 80%;
   height: 50px;
   margin: auto;
@@ -99,165 +109,151 @@ body{
   font-weight: bold;
   margin-bottom: 10px;
 }
-#treehouse_profile .homepage .form_wrap button:hover{
+#treehouse_profile .homepage .form_wrap button:hover {
   background: #3ac162;
 }
-@media (max-width:500px) {
-    #treehouse_profile .homepage .form_wrap {
-        width: 80%;
-        margin-top: -120px;
-        margin-left: -40%;
-    }
+#treehouse_profile .homepage .form_wrap .error{
+  width: 80%;
+  margin: auto;
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
 }
 
+@media (max-width:500px) {
+  #treehouse_profile .homepage .form_wrap {
+    width: 80%;
+    margin-top: -120px;
+    margin-left: -40%;
+  }
+}
 /*profile header*/
 
 #treehouse_profile h1, h2, h3 {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 #treehouse_profile h1 {
-    font-size: 30px;
+  font-size: 30px;
 }
 #treehouse_profile h2 {
-    font-size: 24px;
+  font-size: 24px;
 }
 #treehouse_profile h3 {
-    font-size: 20px;
+  font-size: 20px;
 }
 #treehouse_profile .title {
-    color: #637a91;
-    margin: 20px 0;
+  color: #637a91;
+  margin: 20px 0;
 }
 #treehouse_profile .profile_header {
-    width: 100%;
-    height: 330px;
-    background: #5fcf80;
-    text-align: center;
-    color: #fff;
-    padding: 20px 0;
+  width: 100%;
+  height: 330px;
+  background: #5fcf80;
+  text-align: center;
+  color: #fff;
+  padding: 20px 0;
 }
 #treehouse_profile .profile_header img {
-    width: 100%;
-    max-width: 170px;
-    border-radius: 50%;
-    border: 10px solid #fff;
-    margin: 15px auto;
+  width: 100%;
+  max-width: 170px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  margin: 15px auto;
 }
 #treehouse_profile .badges {
-    width: 100%;
-    height: 575px;
-    position: relative;
-    border-bottom: 1px solid #9b9b9b;
-    overflow: hidden;
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid #9b9b9b;
 }
 #treehouse_profile .badges .section_name {
-    width: 250px;
-    height: 100px;
-    line-height: 100px;
-    background: rgba(255, 255, 255, .9);
-    color: #637a91;
-    border-radius: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -125px;
-    z-index: 20;
+  width: 100%;
+  padding: 20px;
+  color: #637a91;
+  background: #f1f1f1;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
 #treehouse_profile .badges .badges_list {
-    width: auto;
-    height: 575px;
-    padding: 10px 0;
-    background: #f1f1f1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 10;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: slide 30s linear infinite;
-}
-@keyframes slide {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(-1000px, 0, 0);
-    }
+  width: auto;
+  padding: 10px 0;
+  background: #f1f1f1;
+  text-align: center;
 }
 #treehouse_profile .badges .badges_list img {
-    width: 100px;
-    height: auto;
-    padding: 5px;
-    box-sizing: border-box;
+  width: 8%;
+  height: auto;
+  padding: 5px;
+  box-sizing: border-box;
 }
-
 /*points earned*/
 
 #treehouse_profile .points_earned {
-    width: 100%;
-    height: auto;
-    min-height: 300px;
-    text-align: center;
+  width: 100%;
+  height: auto;
+  min-height: 300px;
+  text-align: center;
 }
 #treehouse_profile .points_earned .total_points {
-    width: auto;
-    margin: auto;
-    color: #53BBB4;
-    font-size: 24px;
-    font-weight: normal;
-    padding-bottom: 10px;
-    display: inline-block;
-    border-bottom: 1px solid #53BBB4;
+  width: auto;
+  margin: auto;
+  color: #53BBB4;
+  font-size: 24px;
+  font-weight: normal;
+  padding-bottom: 10px;
+  display: inline-block;
+  border-bottom: 1px solid #53BBB4;
 }
 #treehouse_profile .points_earned .total_points span {
-    font-weight: bold;
+  font-weight: bold;
 }
-#treehouse_profile .points_earned .points,
-#treehouse_profile .points_earned .points_chart {
-    width: 50%;
-    float: left;
-    height: 100%;
+#treehouse_profile .points_earned .points, #treehouse_profile .points_earned .points_chart {
+  width: 50%;
+  float: left;
+  height: 100%;
 }
 #treehouse_profile .points_earned .points_wrap {
-    width: 100%;
-    height: auto;
-    margin: 30px auto;
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
 }
 #treehouse_profile .points_earned h2 {
-    color: #363636;
-    text-decoration: underline;
+  color: #363636;
+  text-decoration: underline;
 }
 #treehouse_profile .points_earned .points ul {
-    width: 80%;
-    height: auto;
-    margin: 20px auto;
-    list-style-type: none;
+  width: 80%;
+  height: auto;
+  margin: 20px auto;
+  list-style-type: none;
 }
 #treehouse_profile .points_earned .points ul li {
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    font-size: 20px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 #treehouse_profile .points_earned .points ul li span {
-    font-weight: bold;
-    padding: 0 5px;
+  font-weight: bold;
+  padding: 0 5px;
 }
 /*chart layout*/
-#treehouse_profile .points_earned .points_chart .chart_container{
+
+#treehouse_profile .points_earned .points_chart .chart_container {
   width: 100%;
   height: auto;
   min-height: 300px;
   margin: 20px auto;
   border-left: 10px solid #637A91;
 }
-#treehouse_profile .points_earned .points_chart  .bar{
+#treehouse_profile .points_earned .points_chart .bar {
   width: 100%;
   height: 40px;
   line-height: 40px;
@@ -271,52 +267,68 @@ body{
   text-transform: uppercase;
 }
 /*chart colors*/
-#treehouse_profile .points_earned .points_chart .bar.javascript{
+
+#treehouse_profile .points_earned .points_chart .bar.javascript {
   background: #C25975;
 }
-#treehouse_profile .points_earned .points_chart .bar.css{
+#treehouse_profile .points_earned .points_chart .bar.css {
   background: #3079ab;
 }
-#treehouse_profile .points_earned .points_chart .bar.html{
-  background:#39ADD1 ;
+#treehouse_profile .points_earned .points_chart .bar.html {
+  background: #39ADD1;
 }
-#treehouse_profile .points_earned .points_chart .bar.php{
+#treehouse_profile .points_earned .points_chart .bar.php {
   background: #7D669E;
 }
-#treehouse_profile .points_earned .points_chart .bar.developmenttools{
+#treehouse_profile .points_earned .points_chart .bar.developmenttools {
   background: #637A91;
 }
-#treehouse_profile .points_earned .points_chart .bar.design{
+#treehouse_profile .points_earned .points_chart .bar.design {
   background: #E59A13;
 }
-#treehouse_profile .points_earned .points_chart .bar.wordpress{
+#treehouse_profile .points_earned .points_chart .bar.wordpress {
   background: #838CC7;
 }
-#treehouse_profile .points_earned .points_chart .bar.ruby{
+#treehouse_profile .points_earned .points_chart .bar.ruby {
   background: #E15258;
 }
-#treehouse_profile .points_earned .points_chart .bar.digitalliteracy{
+#treehouse_profile .points_earned .points_chart .bar.digitalliteracy {
   background: #C38CD4;
 }
-#treehouse_profile .points_earned .points_chart .bar.business{
+#treehouse_profile .points_earned .points_chart .bar.business {
   background: #F9845B;
 }
 
+#footer{
+  background: #FFFFFF;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #9b9b9b;
+  text-align: center;
+  box-shadow: 0 -3px 3px rgba(0, 0, 0, 0.2);
 
+}
 
 .clearfix:after {
-     visibility: hidden;
-     display: block;
-     font-size: 0;
-     content: " ";
-     clear: both;
-     height: 0;
-     }
-.clearfix { display: inline-block; }
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
 /* start commented backslash hack \*/
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
-/* close commented backslash hack */
 
+* html .clearfix {
+  height: 1%;
+}
+.clearfix {
+  display: block;
+}
+/* close commented backslash hack */
 
 /**/

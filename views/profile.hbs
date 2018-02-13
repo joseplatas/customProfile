@@ -1,15 +1,19 @@
 <div id="treehouse_profile">
-    <!-- endof::treehouse_loading -->
+    <a class="search_again_btn" href="/">SEARCH AGAIN</a>
     <div class="profile_header">
         <h1>Treehouse Profile</h1>
-        <img src="{{profile.gravatar_url}}" alt="" />
+        <a href="{{profile.profile_url}}" target="_blank">
+          <img src="{{profile.gravatar_url}}" alt="" />
+        </a>
         <h2>{{profile.name}}</h2>
     </div>
     <!-- endof::profile_header -->
     <div class="badges">
-        <div class="section_name">My Badges</div>
+        <div class="section_name">Badges Earned</div>
         <div class="badges_list">
-
+          {{#each profile.badges }}
+            <img src="{{this.icon_url}}" title="{{this.name}}"/>
+          {{/each}}
         </div>
     </div>
     <!-- endof::badges -->
@@ -17,33 +21,17 @@
         <h1 class="title">Points Earned</h1>
         <div class="page_wrapper">
             <div class="total_points">
-                <span id="total_points">14,497</span> Total Points
+                <span id="total_points">{{number_with_commas profile.points.total}}</span> Total Points
             </div>
             <div class="points_wrap clearfix">
-                <div class="points">
-                    <h2>Topics</h2>
-                    <ul>
-                        <li class="javascript">
-                            <span>3198</span> JAVASCRIPT
-                        </li>
-                    </ul>
+                {{{chart_builder profile.points}}}
 
-                </div>
-                <div class="points_chart">
-                  <h2>Points Chart</h2>
-                  <div class="chart_container">
-                      <div class="bar">
-                        javascript
-                      </div>
-                  </div>
-                </div>
             </div>
         </div>
     </div>
     <!-- endof::points_earned -->
-    <div class="achievements">
-
-    </div>
 
 </div>
 <!-- endof::teamtreehouse_profile -->
+
+{{> footer}}

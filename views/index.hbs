@@ -1,13 +1,24 @@
 <div id="treehouse_profile">
-
   <div class="homepage">
     <div class="form_wrap">
       <h1>Treehouse Profile</h1>
       <p>Search for a username to find out more</p>
       <form action="/profile" method="GET">
-        <input type="text" name="username" value="joseplatas" placeholder="username">
+        {{#if username}}
+        <input type="text" name="username" value="{{username}}" placeholder="username" autofocus>
+        {{else}}
+        <input type="text" name="username" value="" placeholder="username" autofocus>
+        {{/if}}
+
         <button type="submit">SEARCH</button>
       </form>
+      {{! ERROR MESSAGES}}
+      {{#if missingUser}}
+        <div class="error">PLEASE ENTER A USER TO SEARCH</div>
+      {{/if}}
+      {{#if noFoundUser}}
+        <div class="error">NO USER WAS FOUND BY: {{username}}</div>
+      {{/if}}
     </div>
   </div>
 
