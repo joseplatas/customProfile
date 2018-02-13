@@ -47,7 +47,6 @@ hbs.registerHelper('chart_builder', function(points){
   //buildin the content
   for (var i = 0; i < arr_points.length; i++) {
     p = arr_points[i];
-    console.log(p);
     // skip courses with zero points
     if(p.value == 0 || p.key == "total"){
       continue;
